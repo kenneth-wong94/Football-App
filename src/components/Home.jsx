@@ -1,7 +1,8 @@
 import React from "react";
 import UpcomingMatches from "./UpcomingMatches";
+import TopScorers from "./TopScorers";
 
-const Home = ({ matches }) => {
+const Home = ({ matches, topScorers }) => {
   return (
     <div className="container mt-4">
       <div className="row">
@@ -12,10 +13,7 @@ const Home = ({ matches }) => {
 
         {/* RIGHT → 4 columns */}
         <div className="col-md-4">
-          <div className="card p-3">
-            <h5>Top Scorers</h5>
-            <p>Coming soon...</p>
-          </div>
+          <TopScorers topScorers={topScorers} />
         </div>
       </div>
     </div>
