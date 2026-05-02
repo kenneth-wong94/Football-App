@@ -13,27 +13,27 @@ const Navbar = () => {
 
         <div
           className="flex-grow-1 d-flex justify-content-center"
-          style={{ marginLeft: "-120px" }}
+          style={{ marginRight: "200px" }}
         >
           <ul className="navbar-nav flex-row gap-4">
             <li className="nav-item">
               <Link className="nav-link" to="/">
-                Home
+                <i className="bi bi-house-door me-2"></i>Home
               </Link>
             </li>
             <li className="nav-item">
               <Link className="nav-link" to="/matches">
-                Matches
+                <i className="bi bi-calendar2-event me-2"></i>Matches
               </Link>
             </li>
             <li className="nav-item">
               <Link className="nav-link" to="/live">
-                Live
+                <i className="bi bi-broadcast me-2"></i>Live
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/scorers">
-                Scorers
+              <Link className="nav-link" to="/favourites">
+                <i className="bi bi-stars me-2"></i>Favourites
               </Link>
             </li>
           </ul>
