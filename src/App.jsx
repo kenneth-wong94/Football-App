@@ -1,10 +1,19 @@
 import React from "react";
+import Navbar from "./components/Navbar";
+import { Route, Routes } from "react-router";
 
 function App() {
   return (
-    <div>
-      <h2></h2>
-    </div>
+    <>
+      <Navbar />
+
+      <Routes>
+        <Route path="/" element={<h1>Home</h1>} />
+        <Route path="/matches" element={<h1>Matches</h1>} />
+        <Route path="/live" element={<h1>Live</h1>} />
+        <Route path="/scorers" element={<h1>Scorers</h1>} />
+      </Routes>
+    </>
   );
 }
 
