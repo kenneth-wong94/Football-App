@@ -15,7 +15,7 @@ const Favourites = ({ favourites, setFavourites }) => {
   if (!favourites.length) {
     return (
       <div className="container mt-4 text-center">
-        <h5>No favourites yet ⭐</h5>
+        <h5>Store your Favourite Matches ⭐</h5>
       </div>
     );
   }

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import UpcomingMatches from "./UpcomingMatches";
 import TopScorers from "./TopScorers";
 import airtable from "../api/airtable";
-import CompletedMatches from "./CompletedMatches";
+import HomeCompletedMatches from "./HomeCompletedMatches";
 
 const Home = ({
   matches,
@@ -21,7 +21,7 @@ const Home = ({
             toggleFavourite={toggleFavourite}
             isFavourited={isFavourited}
           />
-          <CompletedMatches finishedMatches={finishedMatches} />
+          <HomeCompletedMatches finishedMatches={finishedMatches} />
         </div>
 
         {/* RIGHT → 4 columns */}
