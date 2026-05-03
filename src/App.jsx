@@ -7,30 +7,37 @@ import Home from "./components/Home";
 import TopScorers from "./components/TopScorers";
 import airtable from "./api/airtable";
 import Favourites from "./components/Favourites";
-import { getUpcomingMatches, getTopScorers } from "./api/football";
+import {
+  getUpcomingMatches,
+  getCompletedMatches,
+  getTopScorers,
+} from "./api/football";
 import AllMatches from "./components/AllMatches";
 import CompletedMatches from "./components/CompletedMatches";
 
 function App() {
   const [matches, setMatches] = useState([]);
+  const [finishedMatches, setFinishedMatches] = useState([]);
   const [topScorers, setTopScorers] = useState([]);
-
   const [favourites, setFavourites] = useState([]);
 
   const loadData = async () => {
     try {
-      const matchesData = await getUpcomingMatches();
-      const scorersData = await getTopScorers();
-      setMatches(matchesData);
-      setTopScorers(scorersData);
-    } catch (err) {
-      console.error(err);
-    }
-  };
+      const [matchesData, completedMatchesData, scorersData, data] =
+        await Promise.all([
+          getUpcomingMatches(),
+          getCompletedMatches(),
+          getTopScorers(),
+          airtable.getFavourites(),
+        ]);
 
-  const loadFavourites = async () => {
-    try {
-      const data = await airtable.getFavourites();
+      setMatches(matchesData);
+      setFinishedMatches(
+        [...completedMatchesData].sort(
+          (a, b) => new Date(b.utcDate) - new Date(a.utcDate),
+        ),
+      );
+      setTopScorers(scorersData);
       setFavourites(data);
     } catch (err) {
       console.error(err);
@@ -39,14 +46,14 @@ function App() {
 
   const isFavourited = (matchId) => {
     return favourites.some(
-      (favourite) => favourite.fields.match_id === matchId.toString(),
+      (favourite) => favourite.fields.match_id === String(matchId),
     );
   };
 
   const toggleFavourite = async (match) => {
     try {
       const existing = favourites.find(
-        (favourite) => favourite.fields.match_id === match.id.toString(),
+        (favourite) => favourite.fields.match_id === String(match.id),
       );
 
       if (existing) {
@@ -64,7 +71,6 @@ function App() {
   };
 
   useEffect(() => {
-    loadFavourites();
     loadData();
   }, []);
 
@@ -78,10 +84,9 @@ function App() {
             <Home
               matches={matches}
               topScorers={topScorers}
-              favourites={favourites}
-              setFavourites={setFavourites}
               isFavourited={isFavourited}
               toggleFavourite={toggleFavourite}
+              finishedMatches={finishedMatches.slice(0, 3)}
             />
           }
         />
@@ -89,15 +94,18 @@ function App() {
           path="/matches"
           element={
             <AllMatches
-              matches={matches}
-              favourites={favourites}
-              setFavourites={setFavourites}
+              matches={matches.slice(0, 9)}
               isFavourited={isFavourited}
               toggleFavourite={toggleFavourite}
             />
           }
         />
-        <Route path="/matches/completed" element={<CompletedMatches />} />
+        <Route
+          path="/matches/completed"
+          element={
+            <CompletedMatches finishedMatches={finishedMatches.slice(0, 9)} />
+          }
+        />
         <Route
           path="/favourites"
           element={

@@ -19,6 +19,22 @@ export const getUpcomingMatches = async () => {
   }
 };
 
+export const getCompletedMatches = async () => {
+  try {
+    const res = await fetch(`/api/competitions/PL/matches?status=FINISHED`, {
+      headers,
+    });
+    if (!res.ok) {
+      throw new Error("failed to fetch completed matches");
+    }
+    const data = await res.json();
+    return data.matches || [];
+  } catch (err) {
+    console.error(err);
+    return [];
+  }
+};
+
 export const getTopScorers = async () => {
   try {
     const res = await fetch(`/api/competitions/PL/scorers`, { headers });
