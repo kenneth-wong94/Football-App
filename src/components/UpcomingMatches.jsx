@@ -7,9 +7,7 @@ const UpcomingMatches = ({ matches, toggleFavourite, isFavourited }) => {
   }
 
   return (
-    // <div className="mt-4">
-    //   <h4>📅 Upcoming matches</h4>
-    <div className="mt-4">
+    <div className="mt-3">
       <div className="d-flex justify-content-between align-items-center mb-2">
         <h4>📅 Upcoming matches</h4>
         <a href="/matches" className="small text-decoration-none">

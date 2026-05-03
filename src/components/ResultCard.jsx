@@ -7,7 +7,7 @@ const ResultCard = ({ match }) => {
   return (
     <div className="card result-card shadow-sm border-0 p-3 h-100">
       {/* League */}
-      <small className="text-muted text-center d-block mb-2">
+      <small className="text-dark text-center d-block mb-2">
         {match.competition.name}
       </small>
 
