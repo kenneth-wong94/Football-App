@@ -23,7 +23,7 @@ const Navbar = () => {
             </li>
             <li className="nav-item">
               <Link className="nav-link" to="/matches">
-                <i className="bi bi-calendar2-event me-2"></i>Matches
+                <i className="bi bi-calendar2-event me-2"></i>View all Matches
               </Link>
             </li>
             <li className="nav-item">

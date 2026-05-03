@@ -1,6 +1,6 @@
 import React from "react";
 
-const UpcomingMatches = ({ matches }) => {
+const UpcomingMatches = ({ matches, toggleFavourite, isFavourited }) => {
   if (!matches || matches.length === 0) {
     return <p>Loading Matches...</p>;
   }
@@ -12,9 +12,17 @@ const UpcomingMatches = ({ matches }) => {
       <div className="row">
         {matches.slice(0, 3).map((match) => (
           <div className="col-md-4 mb-4" key={match.id}>
-            <div className="card shadow-sm border-0 p-3 h-100">
+            <div className="card shadow-sm border-0 p-3 h-100 position relative">
+              {/* favourite button */}
+              <button
+                className="fav-btn position-absolute top-0 end-0 m-2"
+                onClick={() => toggleFavourite(match)}
+              >
+                {isFavourited(match.id) ? "⭐" : "☆"}
+              </button>
+
               {/* League */}
-              <small className="text-muted text-center d-block">
+              <small className="text-muted text-start d-block">
                 {match.competition.name}
               </small>
 
