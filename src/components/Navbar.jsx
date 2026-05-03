@@ -7,7 +7,7 @@ const Navbar = () => {
       <div className="container-fluid">
         <div className="flex-grow-1">
           <Link className="navbar-brand" to="/">
-            ⚽ Football App
+            ⚽ Premier League Hub
           </Link>
         </div>
 
@@ -27,8 +27,8 @@ const Navbar = () => {
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/live">
-                <i className="bi bi-broadcast me-2"></i>Live
+              <Link className="nav-link" to="/matches/completed">
+                <i className="bi bi-broadcast me-2"></i>Completed Matches
               </Link>
             </li>
             <li className="nav-item">

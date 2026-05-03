@@ -9,11 +9,11 @@ import airtable from "./api/airtable";
 import Favourites from "./components/Favourites";
 import { getUpcomingMatches, getTopScorers } from "./api/football";
 import AllMatches from "./components/AllMatches";
+import CompletedMatches from "./components/CompletedMatches";
 
 function App() {
   const [matches, setMatches] = useState([]);
   const [topScorers, setTopScorers] = useState([]);
-  const [loading, setLoading] = useState(true);
 
   const [favourites, setFavourites] = useState([]);
 
@@ -25,8 +25,6 @@ function App() {
       setTopScorers(scorersData);
     } catch (err) {
       console.error(err);
-    } finally {
-      setLoading(false);
     }
   };
 
@@ -99,7 +97,7 @@ function App() {
             />
           }
         />
-        <Route path="/live" element={<h1>Live</h1>} />
+        <Route path="/matches/completed" element={<CompletedMatches />} />
         <Route
           path="/favourites"
           element={

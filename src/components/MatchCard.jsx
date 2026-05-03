@@ -2,7 +2,7 @@ import React from "react";
 
 const MatchCard = ({ match, toggleFavourite, isFavourited }) => {
   return (
-    <div className="card match-card position-relative shadow-sm border-0 p-3 h-100">
+    <div className="card match-card position-relative shadow-sm border-0 p-3 h-100 d-flex flex-column">
       <button
         className="fav-btn position-absolute top-0 end-0 m-2"
         onClick={() => toggleFavourite(match)}
@@ -10,7 +10,7 @@ const MatchCard = ({ match, toggleFavourite, isFavourited }) => {
         {isFavourited(match.id) ? "⭐" : "☆"}
       </button>
       {/* League */}
-      <small className="text-muted text-start d-block mb-2">
+      <small className="text-dark text-start d-block mb-2">
         {match.competition.name}
       </small>
 
@@ -33,16 +33,9 @@ const MatchCard = ({ match, toggleFavourite, isFavourited }) => {
       </div>
 
       {/* Date */}
-      <p className="text-center text-muted small mb-3">
+      <p className="text-center text-muted small mt-auto">
         {new Date(match.utcDate).toLocaleString()}
       </p>
-
-      {/* Button
-      <div className="text-center">
-        <button className="btn btn-outline-primary btn-sm w-75">
-          Upcoming
-        </button>
-      </div> */}
     </div>
   );
 };

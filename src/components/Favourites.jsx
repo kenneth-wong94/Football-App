@@ -22,7 +22,7 @@ const Favourites = ({ favourites, setFavourites }) => {
 
   return (
     <div className="container mt-4">
-      <h4 className="mb-3">Favourites List ⭐</h4>
+      <h4 className="mb-3">Your Favourited Matches ⭐</h4>
 
       <ul className="list-group">
         {favourites.map((fav) => {

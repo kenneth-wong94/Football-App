@@ -9,7 +9,7 @@ const TopScorers = ({ topScorers }) => {
     <div className="card shadow-sm border-0 p-3">
       <h5 className="mb-3">🔥 Top Scorers</h5>
 
-      {topScorers.slice(0, 10).map((s, index) => (
+      {topScorers.map((s, index) => (
         <div key={s.player.id} className="d-flex align-items-center mb-3">
           {/* Rank */}
           <div className="fw-bold me-2">{index + 1}.</div>
