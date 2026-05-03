@@ -1,8 +1,5 @@
-const API_KEY = import.meta.env.VITE_FOOTBALL_API_KEY;
-const BASE_URL = "https://api.football-data.org/v4";
-
 const headers = {
-  "X-Auth-Token": API_KEY,
+  "X-Auth-Token": import.meta.env.VITE_FOOTBALL_API_KEY,
 };
 
 export const getUpcomingMatches = async () => {

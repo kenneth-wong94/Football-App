@@ -3,7 +3,7 @@ import React from "react";
 const CompletedMatches = () => {
   return (
     <div>
-      <H1>HI</H1>
+      <h1>HI</h1>
     </div>
   );
 };
