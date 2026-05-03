@@ -1,17 +1,13 @@
 import React from "react";
 import MatchCard from "./MatchCard";
 
-const UpcomingMatches = ({ matches, toggleFavourite, isFavourited }) => {
-  if (!matches || matches.length === 0) {
-    return <p>Loading Matches...</p>;
-  }
-
+const AllMatches = ({ matches, toggleFavourite, isFavourited }) => {
   return (
-    <div className="mt-4">
-      <h4>📅 Upcoming matches</h4>
+    <div className="container mt-4">
+      <h4>📅 All Matches</h4>
 
       <div className="row">
-        {matches.slice(0, 3).map((match) => (
+        {matches.map((match) => (
           <div className="col-md-4 mb-4" key={match.id}>
             <MatchCard
               match={match}
@@ -24,4 +20,5 @@ const UpcomingMatches = ({ matches, toggleFavourite, isFavourited }) => {
     </div>
   );
 };
-export default UpcomingMatches;
+
+export default AllMatches;
