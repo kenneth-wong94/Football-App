@@ -13,7 +13,7 @@ const UpcomingMatches = ({ matches, toggleFavourite, isFavourited }) => {
       </div>
       <div className="row">
         {matches.map((match) => (
-          <div className="col-md-4 mb-4" key={match.id}>
+          <div className="col-md-6 mb-4" key={match.id}>
             <MatchCard
               match={match}
               toggleFavourite={toggleFavourite}
