@@ -9,6 +9,7 @@ const Navbar = () => {
           <Link className="navbar-brand" to="/">
             <img
               src="/images/premier-league-logo.jpg"
+              alt="premier-league-logo"
               style={{ width: "40px" }}
             />{" "}
             Premier League Hub

@@ -5,7 +5,7 @@ const AllMatches = ({ matches, toggleFavourite, isFavourited }) => {
   return (
     <div className="container mt-4">
       <h4>
-        <i class="bi bi-calendar-event-fill"></i> Upcoming Matches
+        <i className="bi bi-calendar-event-fill"></i> Upcoming Matches
       </h4>
 
       <div className="row">

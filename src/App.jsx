@@ -95,7 +95,7 @@ function App() {
           path="/"
           element={
             <Home
-              matches={matches}
+              matches={matches.slice(0, 3)}
               topScorers={topScorers}
               isFavourited={isFavourited}
               toggleFavourite={toggleFavourite}
