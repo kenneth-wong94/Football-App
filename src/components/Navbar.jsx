@@ -7,7 +7,11 @@ const Navbar = () => {
       <div className="container-fluid">
         <div className="flex-grow-1">
           <Link className="navbar-brand" to="/">
-            ⚽ Premier League Hub
+            <img
+              src="/images/premier-league-logo.jpg"
+              style={{ width: "40px" }}
+            />{" "}
+            Premier League Hub
           </Link>
         </div>
 
