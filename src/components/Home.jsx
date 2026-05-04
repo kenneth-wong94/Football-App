@@ -29,6 +29,13 @@ const Home = ({
           <TopScorers topScorers={topScorers} />
         </div>
       </div>
+      <div className="mt-4">
+        <img
+          src="/images/banner.jpg"
+          alt="banner-logo"
+          style={{ width: "100%" }}
+        />
+      </div>
     </div>
   );
 };

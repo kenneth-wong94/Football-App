@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "./components/Navbar";
 import { Route, Routes } from "react-router";
-
 import Home from "./components/Home";
-
 import TopScorers from "./components/TopScorers";
 import airtable from "./api/airtable";
 import Favourites from "./components/Favourites";
