@@ -1,10 +1,6 @@
 import React from "react";
 
 const TopScorers = ({ topScorers }) => {
-  if (!topScorers || topScorers.length === 0) {
-    return <p>Loading Top Scorers...</p>;
-  }
-
   return (
     <div className="card shadow-sm border-0 p-3">
       <h5 className="mb-3">🔥 Top Scorers</h5>

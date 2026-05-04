@@ -28,7 +28,7 @@ const Navbar = () => {
             </li>
             <li className="nav-item">
               <Link className="nav-link" to="/matches/completed">
-                <i className="bi bi-broadcast me-2"></i>Completed Matches
+                <i className="bi bi-check2-circle me-2"></i>Completed Matches
               </Link>
             </li>
             <li className="nav-item">

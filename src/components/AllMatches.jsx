@@ -2,12 +2,11 @@ import React from "react";
 import MatchCard from "./MatchCard";
 
 const AllMatches = ({ matches, toggleFavourite, isFavourited }) => {
-  if (!matches || matches.length === 0) {
-    return <p>Loading Matches...</p>;
-  }
   return (
     <div className="container mt-4">
-      <h4>📅 All Matches</h4>
+      <h4>
+        <i class="bi bi-calendar-event-fill"></i> Upcoming Matches
+      </h4>
 
       <div className="row">
         {matches.map((match) => (

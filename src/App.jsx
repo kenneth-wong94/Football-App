@@ -20,6 +20,7 @@ function App() {
   const [finishedMatches, setFinishedMatches] = useState([]);
   const [topScorers, setTopScorers] = useState([]);
   const [favourites, setFavourites] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   const loadData = async () => {
     try {
@@ -41,6 +42,8 @@ function App() {
       setFavourites(data);
     } catch (err) {
       console.error(err);
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -73,6 +76,16 @@ function App() {
   useEffect(() => {
     loadData();
   }, []);
+
+  if (isLoading) {
+    return (
+      <div className="d-flex justify-content-center align-items-center vh-100">
+        <div className="spinner-grow " role="status">
+          <span className="visually-hidden">Loading...</span>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <>

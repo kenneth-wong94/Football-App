@@ -27,7 +27,7 @@ const createFavourite = async (match) => {
     headers,
     body: JSON.stringify({
       fields: {
-        match_id: match.id.toString(),
+        match_id: String(match.id),
         home_team: match.homeTeam.name,
         away_team: match.awayTeam.name,
         date: match.utcDate,
