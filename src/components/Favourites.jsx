@@ -1,13 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import airtable from "../api/airtable";
 
 const Favourites = ({ favourites, setFavourites }) => {
+  const [isRemoved, setIsRemoved] = useState(false);
+
   const handleRemove = async (fav) => {
+    if (isRemoved) return;
+    setIsRemoved(true);
     try {
       await airtable.deleteFavourite(fav.id);
       setFavourites((prev) => prev.filter((item) => item.id !== fav.id));
     } catch (err) {
       console.error(err);
+    } finally {
+      setIsRemoved(false);
     }
   };
 

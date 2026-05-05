@@ -19,7 +19,7 @@ function App() {
   const [topScorers, setTopScorers] = useState([]);
   const [favourites, setFavourites] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
-  const lockRef = useRef(false);
+  const [isToggling, setIsToggling] = useState(false);
 
   const loadData = async () => {
     try {
@@ -53,8 +53,9 @@ function App() {
   };
 
   const toggleFavourite = async (match) => {
-    if (lockRef.current) return;
-    lockRef.current = true;
+    if (isToggling) return;
+    setIsToggling(true);
+
     try {
       const existing = favourites.find(
         (favourite) => favourite.fields.match_id === String(match.id),
@@ -71,9 +72,7 @@ function App() {
     } catch (err) {
       console.error(err);
     } finally {
-      setTimeout(() => {
-        lockRef.current = false;
-      }, 1500);
+      setIsToggling(false);
     }
   };
 
