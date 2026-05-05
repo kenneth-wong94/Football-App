@@ -4,7 +4,7 @@ A responsive football web application featuring premier league that allows users
 
 ## 💡 Background & Motivation
 
-Football is one of the most popular sports worldwide, and fans often rely on multiple platforms to keep track of match schedules, results, and player statistics. However, many existing platforms can feel cluttered, overwhelming, or lack personalization features.
+Football is one of the most popular sports worldwide, and fans often rely on multiple platforms to keep track of match schedules, results, and player statistics.
 
 This project was created to provide a simple, clean, and user-friendly interface for football fans to quickly access key information such as upcoming matches, completed results, and top scorers in one place.
 
