@@ -1,5 +1,5 @@
 const BASE_ID = import.meta.env.VITE_AIRTABLE_BASE_ID;
-const TOKEN = import.meta.env.VITE_AIRTABLE_TOKEN;
+const TOKEN = import.meta.env.VITE_AIRTABLE_API_KEY;
 
 const BASE_URL = `https://api.airtable.com/v0/${BASE_ID}/Favourites`;
 

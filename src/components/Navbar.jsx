@@ -6,7 +6,7 @@ const Navbar = () => {
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <div className="container-fluid">
         <div className="flex-grow-0.5">
-          <Link className="navbar-brand" to="/">
+          <Link className="fw-bold fst-italic navbar-brand" to="/">
             <img
               className="me-2"
               src="/images/premier-league-logo.jpg"
