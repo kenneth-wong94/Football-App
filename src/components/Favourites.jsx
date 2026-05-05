@@ -5,7 +5,6 @@ const Favourites = ({ favourites, setFavourites }) => {
   const handleRemove = async (fav) => {
     try {
       await airtable.deleteFavourite(fav.id);
-
       setFavourites((prev) => prev.filter((item) => item.id !== fav.id));
     } catch (err) {
       console.error(err);

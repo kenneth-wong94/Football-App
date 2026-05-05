@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Navbar from "./components/Navbar";
 import { Route, Routes } from "react-router";
 import Home from "./components/Home";
@@ -19,6 +19,7 @@ function App() {
   const [topScorers, setTopScorers] = useState([]);
   const [favourites, setFavourites] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+  const lockRef = useRef(false);
 
   const loadData = async () => {
     try {
@@ -52,6 +53,8 @@ function App() {
   };
 
   const toggleFavourite = async (match) => {
+    if (lockRef.current) return;
+    lockRef.current = true;
     try {
       const existing = favourites.find(
         (favourite) => favourite.fields.match_id === String(match.id),
@@ -59,7 +62,6 @@ function App() {
 
       if (existing) {
         await airtable.deleteFavourite(existing.id);
-
         setFavourites((prev) => prev.filter((fav) => fav.id !== existing.id));
       } else {
         const newFav = await airtable.createFavourite(match);
@@ -68,6 +70,10 @@ function App() {
       }
     } catch (err) {
       console.error(err);
+    } finally {
+      setTimeout(() => {
+        lockRef.current = false;
+      }, 1500);
     }
   };
 
