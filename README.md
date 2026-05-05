@@ -23,8 +23,7 @@ Overall, this application reflects both a passion for football and a focus on bu
 ## ✨ Features
 
 - View upcoming matches:
-
-![UpcomingMatches](public/readme-images/Upcoming%20matches.png)
+<img src="public/readme-images/Upcoming%20matches.png" width="300" alt="upcoming matches">
 
 - View completed match results:
 
