@@ -25,7 +25,7 @@ const HomeCompletedMatches = ({ finishedMatches }) => {
 
             {/* Date */}
             <div className="text-muted small">
-              {new Date(match.utcDate).toLocaleString()}
+              {new Date(match.utcDate).toLocaleString("en-GB")}
             </div>
           </div>
         ))}

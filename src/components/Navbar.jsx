@@ -5,7 +5,7 @@ const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <div className="container-fluid">
-        <div className="flex-grow-1">
+        <div className="flex-grow-0.5">
           <Link className="navbar-brand" to="/">
             <img
               src="/images/premier-league-logo.jpg"
@@ -17,8 +17,8 @@ const Navbar = () => {
         </div>
 
         <div
-          className="flex-grow-1 d-flex justify-content-center"
-          style={{ marginRight: "200px" }}
+          className="flex-grow-1 d-flex justify-content-start"
+          // style={{ marginRight: "200px" }}
         >
           <ul className="navbar-nav flex-row gap-4">
             <li className="nav-item">
@@ -43,8 +43,6 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-
-        <div className="flex-grow-1"></div>
       </div>
     </nav>
   );

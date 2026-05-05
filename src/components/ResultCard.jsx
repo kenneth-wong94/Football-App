@@ -1,9 +1,6 @@
 import React from "react";
 
 const ResultCard = ({ match }) => {
-  const homeGoals = match.score.fullTime.home;
-  const awayGoals = match.score.fullTime.away;
-
   return (
     <div className="card result-card shadow-sm border-0 p-3 h-100">
       {/* League */}
@@ -21,7 +18,7 @@ const ResultCard = ({ match }) => {
 
         {/* Score */}
         <div className="score-text">
-          {homeGoals} - {awayGoals}
+          {match.score.fullTime.home} - {match.score.fullTime.away}
         </div>
 
         {/* Away */}
@@ -33,12 +30,7 @@ const ResultCard = ({ match }) => {
 
       {/* Date */}
       <p className="text-center text-muted small mt-auto">
-        {new Date(match.utcDate).toLocaleString("en-GB", {
-          day: "numeric",
-          month: "short",
-          hour: "2-digit",
-          minute: "2-digit",
-        })}
+        {new Date(match.utcDate).toLocaleString("en-GB")}
       </p>
     </div>
   );

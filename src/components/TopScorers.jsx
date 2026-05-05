@@ -19,7 +19,6 @@ const TopScorers = ({ topScorers }) => {
             alt={topScorer.team.name}
             width="30"
             height="30"
-            style={{ objectFit: "contain" }}
           />
 
           {/* Player info */}
