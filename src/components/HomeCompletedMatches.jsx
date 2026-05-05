@@ -15,10 +15,10 @@ const HomeCompletedMatches = ({ finishedMatches }) => {
         {finishedMatches.map((match) => (
           <div key={match.id} className="list-group-item result-item">
             <div className="fw-semibold">
-              {match.homeTeam.shortName}{" "}
-              <span className="fw-bold">
+              {match.homeTeam.shortName}
+              <span className="fw-bold mx-2">
                 {match.score.fullTime.home} - {match.score.fullTime.away}
-              </span>{" "}
+              </span>
               {match.awayTeam.shortName}
             </div>
             <div className="text-muted small">
