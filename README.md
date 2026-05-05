@@ -23,20 +23,16 @@ Overall, this application reflects both a passion for football and a focus on bu
 ## ✨ Features
 
 - View upcoming matches:
-
-![UpcomingMatches](public/readme-images/Upcoming%20matches.png)
+<img src="public/readme-images/Upcoming%20matches.png" width="500" alt="Upcoming matches">
 
 - View completed match results:
-
-![CompletedMatches](public/readme-images/Completed%20Matches.png)
+<img src="public/readme-images/Completed%20Matches.png" width="500" alt="Completed matches">
 
 - View top scorers leaderboard:
-
-![TopScorers](public/readme-images/Top%20scorers.png)
+<img src="public/readme-images/Top%20scorers.png" width="500" alt="Top scorers">
 
 - Add matches to favourites:
-
-![Favourites](public/readme-images/Favourites.png)
+<img src="public/readme-images/Favourites.png" width="500" alt="Favourites">
 
 - Remove matches from favourites
 - Persist favourites using Airtable (CRUD operations)
