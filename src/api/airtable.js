@@ -8,7 +8,6 @@ const headers = {
   "Content-Type": "application/json",
 };
 
-// GET
 const getFavourites = async () => {
   const res = await fetch(BASE_URL, { headers });
 
@@ -20,7 +19,6 @@ const getFavourites = async () => {
   return data.records;
 };
 
-// POST
 const createFavourite = async (match) => {
   const res = await fetch(BASE_URL, {
     method: "POST",
@@ -43,7 +41,6 @@ const createFavourite = async (match) => {
   return data;
 };
 
-// DELETE
 const deleteFavourite = async (recordId) => {
   const res = await fetch(`${BASE_URL}/${recordId}`, {
     method: "DELETE",

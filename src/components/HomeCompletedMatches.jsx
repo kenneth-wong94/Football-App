@@ -4,7 +4,7 @@ import { Link } from "react-router";
 const HomeCompletedMatches = ({ finishedMatches }) => {
   return (
     <div className="mt-4">
-      <div className="d-flex justify-content-between align-items-center mb-2">
+      <div className="text-light d-flex justify-content-between align-items-center mb-2">
         <h5>Completed Matches</h5>
         <Link to="/matches/completed" className="small text-decoration-none">
           View All →
@@ -14,7 +14,6 @@ const HomeCompletedMatches = ({ finishedMatches }) => {
       <div className="list-group">
         {finishedMatches.map((match) => (
           <div key={match.id} className="list-group-item result-item">
-            {/* Match title */}
             <div className="fw-semibold">
               {match.homeTeam.shortName}{" "}
               <span className="fw-bold">
@@ -22,8 +21,6 @@ const HomeCompletedMatches = ({ finishedMatches }) => {
               </span>{" "}
               {match.awayTeam.shortName}
             </div>
-
-            {/* Date */}
             <div className="text-muted small">
               {new Date(match.utcDate).toLocaleString("en-GB")}
             </div>

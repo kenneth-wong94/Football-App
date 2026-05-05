@@ -9,25 +9,22 @@ const MatchCard = ({ match, toggleFavourite, isFavourited }) => {
       >
         {isFavourited(match.id) ? "⭐" : "☆"}
       </button>
-      {/* League Name */}
-      <small className="text-dark text-start d-block mb-2">
+
+      <strong className="text-dark text-center d-block mb-2">
         {match.competition.name}
-      </small>
+      </strong>
 
       <div className="d-flex align-items-center justify-content-between my-3">
-        {/* Home */}
         <div className="team-col text-center">
           <img src={match.homeTeam.crest} className="team-logo" />
-          <p className="team-name">{match.homeTeam.shortName}</p>
+          <p className="text-dark team-name">{match.homeTeam.shortName}</p>
         </div>
         <div className="vs-text">VS</div>
-        {/* Away */}
-        <div className="team-col text-center">
+        <div className="text-dark team-col text-center">
           <img src={match.awayTeam.crest} className="team-logo" />
           <p className="team-name">{match.awayTeam.shortName}</p>
         </div>
       </div>
-      {/* Date */}
       <p className="text-center text-muted small mt-auto">
         <i className="bi bi-stopwatch-fill me-1"></i>
         {new Date(match.utcDate).toLocaleString("en-GB")}

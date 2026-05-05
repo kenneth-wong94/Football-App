@@ -9,7 +9,7 @@ const Favourites = ({ favourites, setFavourites }) => {
     setIsRemoved(true);
     try {
       await airtable.deleteFavourite(fav.id);
-      setFavourites((prev) => prev.filter((item) => item.id !== fav.id));
+      setFavourites((prevFav) => prevFav.filter((item) => item.id !== fav.id));
     } catch (err) {
       console.error(err);
     } finally {
@@ -19,7 +19,7 @@ const Favourites = ({ favourites, setFavourites }) => {
 
   if (!favourites.length) {
     return (
-      <div className="container mt-4 text-center">
+      <div className="text-light container mt-4 text-center">
         <h5>Store your Favourite Matches ⭐</h5>
       </div>
     );
@@ -27,7 +27,7 @@ const Favourites = ({ favourites, setFavourites }) => {
 
   return (
     <div className="container mt-4">
-      <h4 className="mb-3">Favourited Upcoming Matches ⭐</h4>
+      <h4 className="text-light mb-3">Favourited Upcoming Matches ⭐</h4>
 
       <ul className="list-group">
         {favourites.map((fav) => {
@@ -41,7 +41,7 @@ const Favourites = ({ favourites, setFavourites }) => {
               <div>
                 <strong>{home_team}</strong> vs <strong>{away_team}</strong>
                 <div className="text-muted small">
-                  {new Date(date).toLocaleString()}
+                  {new Date(date).toLocaleString("en-GB")}
                 </div>
               </div>
 

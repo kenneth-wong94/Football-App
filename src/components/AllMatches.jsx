@@ -3,7 +3,7 @@ import MatchCard from "./MatchCard";
 
 const AllMatches = ({ matches, toggleFavourite, isFavourited }) => {
   return (
-    <div className="container mt-4">
+    <div className="text-light container mt-4">
       <h4>
         <i className="bi bi-calendar-event-fill"></i> Upcoming Matches
       </h4>

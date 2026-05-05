@@ -8,18 +8,16 @@ const Navbar = () => {
         <div className="flex-grow-0.5">
           <Link className="navbar-brand" to="/">
             <img
+              className="me-2"
               src="/images/premier-league-logo.jpg"
               alt="premier-league-logo"
               style={{ width: "40px" }}
-            />{" "}
+            />
             Premier League Hub
           </Link>
         </div>
 
-        <div
-          className="flex-grow-1 d-flex justify-content-start"
-          // style={{ marginRight: "200px" }}
-        >
+        <div className="flex-grow-1 d-flex justify-content-start">
           <ul className="navbar-nav flex-row gap-4">
             <li className="nav-item">
               <Link className="nav-link" to="/">

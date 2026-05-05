@@ -10,7 +10,7 @@ html {
 
 body {
   margin: 0;
-  background-color: #f8f9fa;
+  background-color: #000000dd;
 }
 
 .fav-btn {
@@ -26,7 +26,7 @@ body {
 
 .match-card {
   border-radius: 12px;
-  background: #fff;
+  background: hsla(0, 0%, 100%, 0.904);
 }
 
 .team-logo {
@@ -59,6 +59,7 @@ body {
 .result-card {
   border-radius: 12px;
   transition: 0.2s ease;
+  background: #ffffffe6;
 }
 
 .score-text {
