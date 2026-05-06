@@ -11,7 +11,7 @@ const Navbar = () => {
               className="me-2"
               src="/images/premier-league-logo.jpg"
               alt="premier-league-logo"
-              style={{ width: "40px" }}
+              width="50"
             />
             Premier League Hub
           </Link>
