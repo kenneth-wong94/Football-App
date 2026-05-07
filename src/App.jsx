@@ -1,17 +1,17 @@
 import React, { useEffect, useRef, useState } from "react";
-import Navbar from "./components/Navbar";
+import Navbar from "./components/navbar/Navbar";
 import { Route, Routes } from "react-router";
-import Home from "./components/Home";
-import TopScorers from "./components/TopScorers";
+import Home from "./components/home/Home";
+import TopScorers from "./components/home/TopScorers";
 import airtable from "./api/airtable";
-import Favourites from "./components/Favourites";
+import Favourites from "./components/navbar/Favourites";
 import {
   getUpcomingMatches,
   getCompletedMatches,
   getTopScorers,
 } from "./api/football";
-import AllMatches from "./components/AllMatches";
-import CompletedMatches from "./components/CompletedMatches";
+import AllMatches from "./components/navbar/AllMatches";
+import CompletedMatches from "./components/navbar/CompletedMatches";
 
 function App() {
   const [matches, setMatches] = useState([]);

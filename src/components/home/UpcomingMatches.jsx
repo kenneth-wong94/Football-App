@@ -1,5 +1,5 @@
 import React from "react";
-import MatchCard from "./MatchCard";
+import MatchCard from "../common/MatchCard";
 import { Link } from "react-router";
 
 const UpcomingMatches = ({ matches, toggleFavourite, isFavourited }) => {

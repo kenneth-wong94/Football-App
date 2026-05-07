@@ -1,5 +1,5 @@
 import React from "react";
-import MatchCard from "./MatchCard";
+import MatchCard from "../common/MatchCard";
 
 const AllMatches = ({ matches, toggleFavourite, isFavourited }) => {
   return (

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import UpcomingMatches from "./UpcomingMatches";
 import TopScorers from "./TopScorers";
-import airtable from "../api/airtable";
+import airtable from "../../api/airtable";
 import HomeCompletedMatches from "./HomeCompletedMatches";
 
 const Home = ({

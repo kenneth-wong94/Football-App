@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import airtable from "../api/airtable";
+import airtable from "../../api/airtable";
 
 const Favourites = ({ favourites, setFavourites }) => {
   const [isRemoved, setIsRemoved] = useState(false);
