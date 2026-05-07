@@ -23,16 +23,16 @@ Overall, this application reflects both a passion for football and a focus on bu
 ## ✨ Features
 
 - View upcoming matches:
-<img src="public/readme-images/Upcoming%20matches.png" width="500" alt="Upcoming matches">
+  <img src="public/readme-images/Upcoming%20matches.png" width="500" alt="Upcoming matches">
 
 - View completed match results:
-<img src="public/readme-images/Completed%20Matches.png" width="500" alt="Completed matches">
+  <img src="public/readme-images/Completed%20Matches.png" width="500" alt="Completed matches">
 
 - View top scorers leaderboard:
-<img src="public/readme-images/Top%20scorers.png" width="500" alt="Top scorers">
+  <img src="public/readme-images/Top%20scorers.png" width="500" alt="Top scorers">
 
 - Add matches to favourites:
-<img src="public/readme-images/Favourites.png" width="500" alt="Favourites">
+  <img src="public/readme-images/Favourites.png" width="500" alt="Favourites">
 
 - Remove matches from favourites
 - Persist favourites using Airtable (CRUD operations)
@@ -42,6 +42,7 @@ Overall, this application reflects both a passion for football and a focus on bu
 
 - Frontend: React
 - Styling: Bootstrap
+- Languages: Javascript, HTML, CSS
 - API: Football-Data API
 - Database: Airtable
 - HTTP Client: Axios / Fetch
@@ -83,6 +84,31 @@ Create a .env file in your root directory:
 - VITE_FOOTBALL_API_KEY=your_api_key
 - VITE_AIRTABLE_API_KEY=your_airtable_key
 - VITE_AIRTABLE_BASE_ID=your_base_id
+
+## Component tree
+
+App
+├── Navbar
+├── Routes
+│
+├── Home
+│ ├── UpcomingMatches
+│ │ └── MatchCard
+│ │
+│ ├── HomeCompletedMatches
+│ │ └── ResultCard
+│ │
+│ └── TopScorers
+│
+├── AllMatches
+│ └── MatchCard
+│
+├── CompletedMatches
+│ └── ResultCard
+│
+├── Favourites
+│  
+└── ErrorComponent
 
 ## 🔥 Future Improvements
 
