@@ -9,45 +9,57 @@ const headers = {
 };
 
 const getFavourites = async () => {
-  const res = await fetch(BASE_URL, { headers });
+  try {
+    const res = await fetch(BASE_URL, { headers });
 
-  if (!res.ok) {
-    throw new Error("Failed to fetch get favourites");
+    if (!res.ok) {
+      throw new Error("Failed to fetch get favourites");
+    }
+
+    const data = await res.json();
+    return data.records;
+  } catch (err) {
+    console.error(err);
   }
-
-  const data = await res.json();
-  return data.records;
 };
 
 const createFavourite = async (match) => {
-  const res = await fetch(BASE_URL, {
-    method: "POST",
-    headers,
-    body: JSON.stringify({
-      fields: {
-        match_id: String(match.id),
-        home_team: match.homeTeam.name,
-        away_team: match.awayTeam.name,
-        date: match.utcDate,
-      },
-    }),
-  });
+  try {
+    const res = await fetch(BASE_URL, {
+      method: "POST",
+      headers,
+      body: JSON.stringify({
+        fields: {
+          match_id: String(match.id),
+          home_team: match.homeTeam.name,
+          away_team: match.awayTeam.name,
+          date: match.utcDate,
+        },
+      }),
+    });
 
-  if (!res.ok) {
-    throw new Error("Failed to fetch create favourites");
+    if (!res.ok) {
+      throw new Error("Failed to fetch create favourites");
+    }
+
+    const data = await res.json();
+    return data;
+  } catch (err) {
+    console.error(err);
   }
-
-  const data = await res.json();
-  return data;
 };
 
 const deleteFavourite = async (recordId) => {
-  const res = await fetch(`${BASE_URL}/${recordId}`, {
-    method: "DELETE",
-    headers,
-  });
-  if (!res.ok) {
-    throw new Error("Failed to fetch delete favourites");
+  try {
+    const res = await fetch(`${BASE_URL}/${recordId}`, {
+      method: "DELETE",
+      headers,
+    });
+    if (!res.ok) {
+      throw new Error("Failed to fetch delete favourites");
+    }
+  } catch (err) {
+    console.error(err);
   }
 };
 
