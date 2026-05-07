@@ -105,7 +105,6 @@ App
 │ └── MatchCard
 │
 ├── CompletedMatches
-│ └── ResultCard
 │
 ├── Favourites
 │
