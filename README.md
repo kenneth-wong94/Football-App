@@ -87,6 +87,7 @@ Create a .env file in your root directory:
 
 ## Component tree
 
+```
 App
 ├── Navbar
 ├── Routes
@@ -107,8 +108,9 @@ App
 │ └── ResultCard
 │
 ├── Favourites
-│  
+│
 └── ErrorComponent
+```
 
 ## 🔥 Future Improvements
 
