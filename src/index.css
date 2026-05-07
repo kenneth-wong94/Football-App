@@ -26,7 +26,7 @@ body {
 
 .match-card {
   border-radius: 12px;
-  background: hsla(0, 0%, 100%, 0.904);
+  background: white;
 }
 
 .team-logo {
