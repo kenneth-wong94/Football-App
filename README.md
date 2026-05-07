@@ -23,15 +23,19 @@ Overall, this application reflects both a passion for football and a focus on bu
 ## ✨ Features
 
 - View upcoming matches:
+
   <img src="public/readme-images/Upcoming%20matches.png" width="500" alt="Upcoming matches">
 
 - View completed match results:
+
   <img src="public/readme-images/Completed%20Matches.png" width="500" alt="Completed matches">
 
 - View top scorers leaderboard:
+
   <img src="public/readme-images/Top%20scorers.png" width="500" alt="Top scorers">
 
 - Add matches to favourites:
+
   <img src="public/readme-images/Favourites.png" width="500" alt="Favourites">
 
 - Remove matches from favourites
@@ -97,7 +101,6 @@ App
 │ │ └── MatchCard
 │ │
 │ ├── HomeCompletedMatches
-│ │ └── ResultCard
 │ │
 │ └── TopScorers
 │
@@ -105,6 +108,7 @@ App
 │ └── MatchCard
 │
 ├── CompletedMatches
+│ └── ResultCard
 │
 ├── Favourites
 │
