@@ -2,6 +2,10 @@
 
 A responsive football web application featuring premier league that allows users to view upcoming matches, completed results, and top scorers using the Football-Data API. Users can also favourite upcoming matches and manage them in favourites tab.
 
+## Live App
+
+https://premier-league-hub.netlify.app/
+
 ## 💡 Background & Motivation
 
 Football is one of the most popular sports worldwide, and fans often rely on multiple platforms to keep track of match schedules, results, and player statistics.
